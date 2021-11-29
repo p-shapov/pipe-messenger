@@ -1,0 +1,28 @@
+{
+  "short_name": "Tg-CRM",
+  "name": "Chrome extension for Tg-CRM",
+  "description": "Chrome extension for transferring data from messengers to CRM systems",
+  "version": "0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open extension"
+  },
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "js": ["./static/js/main.js"],
+      "matches": [
+        "https://web.telegram.org/z/*"
+      ],
+      "all_frames": true
+    }
+  ]
+}
